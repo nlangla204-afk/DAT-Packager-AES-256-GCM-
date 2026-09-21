@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard · CONFIG LICENSE SERVER</title>
+<link rel="stylesheet" href="/admin/assets/admin.css">
+</head>
+<body>
+  <div class="dash-wrap">
+    <header class="dash-header">
+      <h1>CONFIG <span>LICENSE ADMIN</span></h1>
+      <button id="logoutBtn" class="btn-ghost">Logout</button>
+    </header>
+
+    <div class="stat-row">
+      <div class="stat-card"><div class="stat-label">Total Keys</div><div class="stat-value" id="statTotal">–</div></div>
+      <div class="stat-card active"><div class="stat-label">Active</div><div class="stat-value" id="statActive">–</div></div>
+      <div class="stat-card expired"><div class="stat-label">Expired</div><div class="stat-value" id="statExpired">–</div></div>
+      <div class="stat-card banned"><div class="stat-label">Banned</div><div class="stat-value" id="statBanned">–</div></div>
+    </div>
+
+    <div class="toolbar">
+      <div class="create-group">
+        <select id="durationSelect">
+          <option value="1_DAY">1 DAY</option>
+          <option value="7_DAYS">7 DAYS</option>
+          <option value="30_DAYS" selected>30 DAYS</option>
+          <option value="90_DAYS">90 DAYS</option>
+          <option value="365_DAYS">365 DAYS</option>
+          <option value="LIFETIME">LIFETIME</option>
+        </select>
+        <button id="createBtn" class="btn-primary">+ CREATE KEY</button>
+        <button id="listBtn" class="btn-ghost">↻ LIST KEYS</button>
+      </div>
+      <div id="toast" class="toast"></div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>KEY</th>
+            <th>STATUS</th>
+            <th>CREATED</th>
+            <th>EXPIRES</th>
+            <th>LAST USED</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody id="keysBody">
+          <tr><td colspan="6" class="empty">Loading…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="/admin/assets/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login · CONFIG LICENSE SERVER</title>
+<link rel="stylesheet" href="/admin/assets/admin.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-card">
+      <h1>CONFIG <span>LICENSE SERVER</span></h1>
+      <p class="sub">Admin access only</p>
+
+      <form id="loginForm">
+        <label>Username</label>
+        <input type="text" id="username" autocomplete="username" required>
+
+        <label>Password</label>
+        <input type="password" id="password" autocomplete="current-password" required>
+
+        <button type="submit" id="loginBtn">LOGIN</button>
+        <div class="error" id="errorMsg"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/admin/assets/login.js"></script>
+</body>
+</html>
